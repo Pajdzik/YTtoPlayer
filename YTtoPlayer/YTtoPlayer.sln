@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.22310.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTtoPlayer.Core", "YTtoPlayer.Core\YTtoPlayer.Core.csproj", "{64D6C5A9-8E55-485D-BC68-14FCDB56F66A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTtoPlayer.View", "YTtoPlayer.View\YTtoPlayer.View.csproj", "{AD41E50A-A36A-48BB-82F4-F8A90687383E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{64D6C5A9-8E55-485D-BC68-14FCDB56F66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D6C5A9-8E55-485D-BC68-14FCDB56F66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D6C5A9-8E55-485D-BC68-14FCDB56F66A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD41E50A-A36A-48BB-82F4-F8A90687383E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD41E50A-A36A-48BB-82F4-F8A90687383E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD41E50A-A36A-48BB-82F4-F8A90687383E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD41E50A-A36A-48BB-82F4-F8A90687383E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
