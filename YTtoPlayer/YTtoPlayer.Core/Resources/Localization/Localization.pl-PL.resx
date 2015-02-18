@@ -103,4 +103,16 @@
   <data name="PasteYouTubeUrl" xml:space="preserve">
     <value>Wklej tutaj link do wideo z YouTube'a</value>
   </data>
+  <data name="Url" xml:space="preserve">
+    <value>Adres</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Pobranie</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Lokalizacja</value>
+  </data>
 </root>

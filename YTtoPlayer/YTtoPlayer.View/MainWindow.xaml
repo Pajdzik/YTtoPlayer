@@ -6,20 +6,23 @@
                       xmlns:local="clr-namespace:YTtoPlayer.View"
                       xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:ytControls="clr-namespace:YTtoPlayer.View.Controls"
                       Title="{x:Static localization:Localization.AppTitle}"
                       Width="600"
                       Height="400"
                       mc:Ignorable="d">
     <controls:MetroAnimatedSingleRowTabControl>
-        <controls:MetroTabItem Header="Youtube URL">
-            <Grid>
-                <TextBox Width="500"
-                         Height="35"
-                         HorizontalAlignment="Center"
-                         VerticalAlignment="Center"
-                         FontSize="20"
-                         controls:TextBoxHelper.Watermark="{x:Static localization:Localization.PasteYouTubeUrl}" />
-            </Grid>
+        <controls:MetroTabItem Header="{x:Static localization:Localization.Url}">
+            <ytControls:YouTubeUrlPage />
+        </controls:MetroTabItem>
+        <controls:MetroTabItem Header="{x:Static localization:Localization.Info}">
+            <ytControls:YouTubeUrlPage />
+        </controls:MetroTabItem>
+        <controls:MetroTabItem Header="{x:Static localization:Localization.Location}">
+            <ytControls:YouTubeUrlPage />
+        </controls:MetroTabItem>
+        <controls:MetroTabItem Header="{x:Static localization:Localization.Download}">
+            <ytControls:YouTubeUrlPage />
         </controls:MetroTabItem>
     </controls:MetroAnimatedSingleRowTabControl>
 </controls:MetroWindow>

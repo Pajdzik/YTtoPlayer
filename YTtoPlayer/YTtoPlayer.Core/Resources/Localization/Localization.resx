@@ -123,4 +123,16 @@
   <data name="PasteYouTubeUrl" xml:space="preserve">
     <value>Paste YouTube video's URL here</value>
   </data>
+  <data name="Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
 </root>
