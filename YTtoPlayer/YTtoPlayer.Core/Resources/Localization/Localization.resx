@@ -120,4 +120,7 @@
   <data name="AppTitle" xml:space="preserve">
     <value>YouTube to MP3 Player</value>
   </data>
+  <data name="PasteYouTubeUrl" xml:space="preserve">
+    <value>Paste YouTube video's URL here</value>
+  </data>
 </root>

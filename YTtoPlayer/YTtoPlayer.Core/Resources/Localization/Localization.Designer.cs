@@ -68,5 +68,14 @@ namespace YTtoPlayer.Core.Resources.Localization {
                 return ResourceManager.GetString("AppTitle", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paste YouTube video&apos;s URL here.
+        /// </summary>
+        public static string PasteYouTubeUrl {
+            get {
+                return ResourceManager.GetString("PasteYouTubeUrl", resourceCulture);
+            }
+        }
     }
 }

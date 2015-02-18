@@ -1,13 +1,25 @@
-﻿<Controls:MetroWindow x:Class="YTtoPlayer.View.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
-        xmlns:local="clr-namespace:YTtoPlayer.View"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
-</Controls:MetroWindow>
+﻿<controls:MetroWindow x:Class="YTtoPlayer.View.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:local="clr-namespace:YTtoPlayer.View"
+                      xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      Title="{x:Static localization:Localization.AppTitle}"
+                      Width="600"
+                      Height="400"
+                      mc:Ignorable="d">
+    <controls:MetroAnimatedSingleRowTabControl>
+        <controls:MetroTabItem Header="Youtube URL">
+            <Grid>
+                <TextBox Width="500"
+                         Height="35"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         FontSize="20"
+                         controls:TextBoxHelper.Watermark="{x:Static localization:Localization.PasteYouTubeUrl}" />
+            </Grid>
+        </controls:MetroTabItem>
+    </controls:MetroAnimatedSingleRowTabControl>
+</controls:MetroWindow>

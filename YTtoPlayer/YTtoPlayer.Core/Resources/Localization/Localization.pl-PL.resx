@@ -100,4 +100,7 @@
   <data name="AppTitle" xml:space="preserve">
     <value>YouTube do odtwarzacza MP3</value>
   </data>
+  <data name="PasteYouTubeUrl" xml:space="preserve">
+    <value>Wklej tutaj link do wideo z YouTube'a</value>
+  </data>
 </root>
