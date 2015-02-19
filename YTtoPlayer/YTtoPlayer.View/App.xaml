@@ -17,9 +17,6 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <viewModels:MainViewModel x:Key="MainViewModel" />
-            <vm:ViewModelLocator xmlns:vm="clr-namespace:YTtoPlayer.View.ViewModel"
-                                 x:Key="Locator"
-                                 d:IsDataSource="True" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
