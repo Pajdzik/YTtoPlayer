@@ -6,13 +6,17 @@
                       xmlns:local="clr-namespace:YTtoPlayer.View"
                       xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                      xmlns:viewModels="clr-namespace:YTtoPlayer.Core.ViewModels;assembly=YTtoPlayer.Core"
                       xmlns:ytControls="clr-namespace:YTtoPlayer.View.Controls"
                       Title="{x:Static localization:Localization.AppTitle}"
                       Width="600"
                       Height="400"
+                      DataContext="{StaticResource MainViewModel}"
                       mc:Ignorable="d">
+
+
     <controls:MetroAnimatedSingleRowTabControl>
-        <controls:MetroTabItem Header="{x:Static localization:Localization.Url}">
+        <controls:MetroTabItem DataContext="{Binding YouTubeUrlViewModel}" Header="{x:Static localization:Localization.Url}">
             <ytControls:YouTubeUrlPage />
         </controls:MetroTabItem>
 
