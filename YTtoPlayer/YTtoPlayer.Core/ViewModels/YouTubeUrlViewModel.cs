@@ -1,11 +1,11 @@
 ﻿namespace YTtoPlayer.Core.ViewModels
 {
-    using Caliburn.Micro;
+    using GalaSoft.MvvmLight;
 
     using PropertyChanged;
 
     [ImplementPropertyChanged]
-    public class YouTubeUrlViewModel : PropertyChangedBase
+    public class YouTubeUrlViewModel : ViewModelBase
     {
         public YouTubeUrlViewModel()
         {

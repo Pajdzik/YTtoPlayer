@@ -1,11 +1,11 @@
 ﻿namespace YTtoPlayer.Core.ViewModels
 {
-    using Caliburn.Micro;
+    using GalaSoft.MvvmLight;
 
     using PropertyChanged;
 
     [ImplementPropertyChanged]
-    public class MainViewModel : PropertyChangedBase
+    public class MainViewModel : ViewModelBase
     {
         public MainViewModel()
         {
