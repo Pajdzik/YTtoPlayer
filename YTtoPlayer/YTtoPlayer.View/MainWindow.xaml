@@ -15,12 +15,15 @@
         <controls:MetroTabItem Header="{x:Static localization:Localization.Url}">
             <ytControls:YouTubeUrlPage />
         </controls:MetroTabItem>
+
         <controls:MetroTabItem Header="{x:Static localization:Localization.Info}">
             <ytControls:YouTubeUrlPage />
         </controls:MetroTabItem>
+
         <controls:MetroTabItem Header="{x:Static localization:Localization.Location}">
             <ytControls:YouTubeUrlPage />
         </controls:MetroTabItem>
+
         <controls:MetroTabItem Header="{x:Static localization:Localization.Download}">
             <ytControls:YouTubeUrlPage />
         </controls:MetroTabItem>
