@@ -1,4 +1,4 @@
-﻿<controls:MetroWindow x:Class="YTtoPlayer.View.MainWindow"
+﻿<controls:MetroWindow x:Class="YTtoPlayer.View.MainView"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
@@ -6,26 +6,26 @@
                       xmlns:local="clr-namespace:YTtoPlayer.View"
                       xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                      xmlns:ytControls="clr-namespace:YTtoPlayer.View.Controls"
+                      xmlns:views="clr-namespace:YTtoPlayer.View.Views"
                       Title="{x:Static localization:Localization.AppTitle}"
                       Width="600"
                       Height="400"
                       mc:Ignorable="d">
     <controls:MetroAnimatedSingleRowTabControl>
         <controls:MetroTabItem Header="{x:Static localization:Localization.Url}">
-            <ytControls:YouTubeUrlPage />
+            <views:YouTubeUrlPage />
         </controls:MetroTabItem>
 
         <controls:MetroTabItem Header="{x:Static localization:Localization.Info}">
-            <ytControls:YouTubeUrlPage />
+            <views:YouTubeUrlPage />
         </controls:MetroTabItem>
 
         <controls:MetroTabItem Header="{x:Static localization:Localization.Location}">
-            <ytControls:YouTubeUrlPage />
+            <views:YouTubeUrlPage />
         </controls:MetroTabItem>
 
         <controls:MetroTabItem Header="{x:Static localization:Localization.Download}">
-            <ytControls:YouTubeUrlPage />
+            <views:YouTubeUrlPage />
         </controls:MetroTabItem>
     </controls:MetroAnimatedSingleRowTabControl>
 </controls:MetroWindow>

@@ -1,11 +1,15 @@
 ﻿<Application x:Class="YTtoPlayer.View.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:configuration="clr-namespace:YTtoPlayer.View.Configuration"
              xmlns:local="clr-namespace:YTtoPlayer.View"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainView.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <configuration:DefaultBootstrapper x:Key="bootstrapper" />
+                </ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
