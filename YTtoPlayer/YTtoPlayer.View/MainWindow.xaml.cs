@@ -1,11 +1,11 @@
 ﻿namespace YTtoPlayer.View
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainView
+    public partial class MainWindow
     {
-        public MainView()
+        public MainWindow()
         {
             InitializeComponent();
         }
