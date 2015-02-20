@@ -6,16 +6,27 @@
              xmlns:local="clr-namespace:YTtoPlayer.View.Controls"
              xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:view="clr-namespace:YTtoPlayer.View"
+             xmlns:viewModels="clr-namespace:YTtoPlayer.Core.ViewModels;assembly=YTtoPlayer.Core"
+             d:DataContext="{d:DesignInstance viewModels:YouTubeUrlViewModel}"
              d:DesignHeight="400"
              d:DesignWidth="600"
              mc:Ignorable="d">
     <Grid>
-        <TextBox Width="500"
-                 Height="35"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 FontSize="20"
-                 Text=""
-                 controls:TextBoxHelper.Watermark="{x:Static localization:Localization.PasteYouTubeUrl}" />
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <TextBox Width="500"
+                     Height="35"
+                     FontSize="20"
+                     Text="{Binding VideoUrl}"
+                     controls:TextBoxHelper.Watermark="{x:Static localization:Localization.PasteYouTubeUrl}" />
+            <Button Width="60"
+                    Height="35"
+                    Command="{Binding DataContext.LoadVideoInfoCommand,
+                                      RelativeSource={RelativeSource FindAncestor,
+                                                                     AncestorType={x:Type view:MainWindow}}}"
+                    Content="{x:Static localization:Localization.LoadInfo}" />
+        </StackPanel>
     </Grid>
 </UserControl>

@@ -88,6 +88,15 @@ namespace YTtoPlayer.Core.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Load info.
+        /// </summary>
+        public static string LoadInfo {
+            get {
+                return ResourceManager.GetString("LoadInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Location.
         /// </summary>
         public static string Location {

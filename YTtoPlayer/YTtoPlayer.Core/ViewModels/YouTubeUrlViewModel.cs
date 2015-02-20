@@ -9,7 +9,6 @@
     {
         public YouTubeUrlViewModel()
         {
-            this.VideoUrl = "aasda";
         }
 
         public string VideoUrl { get; set; }
