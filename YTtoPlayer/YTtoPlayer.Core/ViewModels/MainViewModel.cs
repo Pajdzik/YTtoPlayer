@@ -19,11 +19,13 @@
 
         public YouTubeUrlViewModel YouTubeUrlViewModel { get; set; }
 
+        public VideoInfoViewModel VideoInfoViewModel { get; set; }
+
         public ICommand LoadVideoInfoCommand { get; set; }
 
         private void LoadVideoInfo()
         {
-            
+            this.VideoInfoViewModel = new VideoInfoViewModel(this.YouTubeUrlViewModel.VideoUrl);
         }
     }
 }
