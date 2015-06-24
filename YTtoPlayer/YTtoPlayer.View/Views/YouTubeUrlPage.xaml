@@ -1,9 +1,8 @@
-﻿<UserControl x:Class="YTtoPlayer.View.Controls.YouTubeUrlPage"
+﻿<UserControl x:Class="YTtoPlayer.View.Views.YouTubeUrlPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:YTtoPlayer.View.Controls"
              xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:view="clr-namespace:YTtoPlayer.View"
@@ -21,11 +20,7 @@
                      FontSize="20"
                      Text="{Binding VideoUrl}"
                      controls:TextBoxHelper.Watermark="{x:Static localization:Localization.PasteYouTubeUrl}" />
-            <Button Width="60"
-                    Height="35"
-                    Command="{Binding DataContext.LoadVideoInfoCommand,
-                                      RelativeSource={RelativeSource FindAncestor,
-                                                                     AncestorType={x:Type view:MainWindow}}}"
+            <Button Height="35"
                     Content="{x:Static localization:Localization.LoadInfo}" />
         </StackPanel>
     </Grid>

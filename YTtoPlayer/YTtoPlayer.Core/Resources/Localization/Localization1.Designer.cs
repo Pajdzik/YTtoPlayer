@@ -10,6 +10,7 @@
 
 namespace YTtoPlayer.Core.Resources.Localization {
     using System;
+    using System.Reflection;
     
     
     /// <summary>
@@ -39,7 +40,7 @@ namespace YTtoPlayer.Core.Resources.Localization {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("YTtoPlayer.Core.Resources.Localization.Localization", typeof(Localization).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("YTtoPlayer.Core.Resources.Localization.Localization", typeof(Localization).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

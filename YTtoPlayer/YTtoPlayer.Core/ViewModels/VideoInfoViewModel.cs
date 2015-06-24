@@ -1,4 +1,6 @@
-﻿namespace YTtoPlayer.Core.ViewModels
+﻿using YTtoPlayer.Core.Models;
+
+namespace YTtoPlayer.Core.ViewModels
 {
     using System;
     using System.IO;
@@ -19,12 +21,13 @@
         private void LoadInfo()
         {
             WebRequest request =
-                WebRequest.Create(string.Format("http://www.youtube.com/oembed?url={0}&format=json", this.videoUrl));
+                WebRequest.Create($"http://www.youtube.com/oembed?url={this.videoUrl}&format=json");
 
             using (WebResponse response = request.GetResponse())
             {
                 StreamReader reader = new StreamReader(response.GetResponseStream());
-                var s = reader.ReadToEnd();
+                String s = reader.ReadToEnd();
+                var a = JsonConvert.DeserializeObject<YoutubeInfo>(s);
             }
 
             

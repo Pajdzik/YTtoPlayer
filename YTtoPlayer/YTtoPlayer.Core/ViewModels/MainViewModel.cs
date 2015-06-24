@@ -1,31 +1,5 @@
-﻿namespace YTtoPlayer.Core.ViewModels
-{
-    using System.Windows.Input;
+using Caliburn.Micro;
 
-    using GalaSoft.MvvmLight;
-    using GalaSoft.MvvmLight.Command;
-
-    using PropertyChanged;
-
-    [ImplementPropertyChanged]
-    public class MainViewModel : ViewModelBase
-    {
-        public MainViewModel()
-        {
-            this.YouTubeUrlViewModel = new YouTubeUrlViewModel();
-
-            this.LoadVideoInfoCommand = new RelayCommand(this.LoadVideoInfo);
-        }
-
-        public YouTubeUrlViewModel YouTubeUrlViewModel { get; set; }
-
-        public VideoInfoViewModel VideoInfoViewModel { get; set; }
-
-        public ICommand LoadVideoInfoCommand { get; set; }
-
-        private void LoadVideoInfo()
-        {
-            this.VideoInfoViewModel = new VideoInfoViewModel(this.YouTubeUrlViewModel.VideoUrl);
-        }
-    }
+namespace YTtoPlayer.Core.ViewModels {
+    public class MainViewModel : PropertyChangedBase { }
 }
