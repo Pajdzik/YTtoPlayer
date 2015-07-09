@@ -118,4 +118,7 @@
   <data name="LoadInfo" xml:space="preserve">
     <value>Wczytaj</value>
   </data>
+  <data name="ChooseLocation" xml:space="preserve">
+    <value>Wybierz lokalizację</value>
+  </data>
 </root>

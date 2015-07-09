@@ -71,6 +71,15 @@ namespace YTtoPlayer.Core.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Choose location.
+        /// </summary>
+        public static string ChooseLocation {
+            get {
+                return ResourceManager.GetString("ChooseLocation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Download.
         /// </summary>
         public static string Download {
