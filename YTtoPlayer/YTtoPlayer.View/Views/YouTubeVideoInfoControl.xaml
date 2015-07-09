@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="YTtoPlayer.View.Views.YouTubeVideoInfoControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:YTtoPlayer.View.Views"
+             xmlns:viewModels="clr-namespace:YTtoPlayer.Core.ViewModels;assembly=YTtoPlayer.Core"
+             xmlns:converters="clr-namespace:SharpEi.Wpf.Converters;assembly=SharpEi.Wpf"
+             d:DataContext="{d:DesignInstance viewModels:YouTubeVideoInfoViewModel}"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+    <Grid>
+        <ListView ItemsSource="{Binding YouTubeVideoInfos}"
+                  BorderThickness="0">
+            <ListView.Resources>
+                <converters:AdditionConverter x:Key="AdditionConverter" />
+            </ListView.Resources>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="3"
+                          Width="{Binding Width, 
+                                        RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainView}}, 
+                                        Converter={StaticResource AdditionConverter}, 
+                                        ConverterParameter=-20}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="4*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0"
+                               Source="{Binding ImagePath}" />
+                        <StackPanel Grid.Column="1"
+                                    Margin="5, 0, 0, 0">
+                            <TextBlock Text="{Binding Title}"
+                                       FontWeight="Bold"
+                                       FontSize="15"
+                                       TextWrapping="Wrap" />
+                            <TextBlock Text="{Binding VideoUri}" />
+                        </StackPanel>
+                    </Grid>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</UserControl>
