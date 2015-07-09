@@ -6,27 +6,30 @@
                       xmlns:local="clr-namespace:YTtoPlayer.View"
                       xmlns:localization="clr-namespace:YTtoPlayer.Core.Resources.Localization;assembly=YTtoPlayer.Core"
                       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                      xmlns:viewModels="clr-namespace:YTtoPlayer.Core.ViewModels;assembly=YTtoPlayer.Core"
                       xmlns:views="clr-namespace:YTtoPlayer.View.Views"
+                      xmlns:viewModels="clr-namespace:YTtoPlayer.Core.ViewModels;assembly=YTtoPlayer.Core"
                       Title="{x:Static localization:Localization.AppTitle}"
                       Width="600"
                       Height="400"
+                      d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
                       mc:Ignorable="d">
 
 
-    <controls:MetroAnimatedSingleRowTabControl>
-        <controls:MetroTabItem DataContext="{Binding YouTubeUrlViewModel}" 
-                               Header="{x:Static localization:Localization.Url}">
-            <views:YouTubeUrlPage />
+    <controls:MetroAnimatedSingleRowTabControl SelectedIndex="{Binding WizardStep}">
+        <controls:MetroTabItem Header="{x:Static localization:Localization.Url}">
+            <views:YouTubeUrlControl DataContext="{Binding YouTubeUrlViewModel}" />
         </controls:MetroTabItem>
 
         <controls:MetroTabItem Header="{x:Static localization:Localization.Info}">
+            <views:YouTubeVideoInfoControl DataContext="{Binding YouTubeVideoInfoViewModel}" />
         </controls:MetroTabItem>
 
         <controls:MetroTabItem Header="{x:Static localization:Localization.Location}">
+            <views:FileLocationControl DataContext="{Binding FileLocationViewModel}" />
         </controls:MetroTabItem>
 
-        <controls:MetroTabItem Header="{x:Static localization:Localization.Download}">
-        </controls:MetroTabItem>
+        <controls:MetroTabItem Header="{x:Static localization:Localization.Download}" />
+
+
     </controls:MetroAnimatedSingleRowTabControl>
 </controls:MetroWindow>
